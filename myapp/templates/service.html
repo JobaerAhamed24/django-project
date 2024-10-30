@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <main class="main">
+            <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+            <h2>Services</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            </div><!-- End Section Title -->
+    
+            <div class="container">
+    
+            <div class="row gy-4">
+                {% for s in service %}
+                <div class=" col-lg-4 col-md-6 service-item d-flex hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon flex-shrink-0"><i class="{{s.icon}}"></i></div>
+                    <div>
+                    <h4 class="title"><a href="service-details.html" class="stretched-link">{{s.title}}</a></h4>
+                    <p class="description">{{s.sort_description}}</p>
+                    </div>
+                </div>
+                <!-- End Service Item -->
+                {% endfor %}
+            </div>
+    
+            </div>
+    
+        </section><!-- /Services Section -->
+    </main>
+{% endblock %}
